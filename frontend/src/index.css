@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ── Design tokens via Tailwind v4 @theme ──────────────────────────────────── */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8fafc;
+  --color-line: #e2e8f0;
+  --color-line-strong: #cbd5e1;
+  --color-glass: rgba(255, 255, 255, 0.82);
+  --color-glass-border: rgba(226, 232, 240, 0.72);
+  --animate-grow-bar: grow-bar 820ms ease both;
+}
+
+/* ── Base resets ───────────────────────────────────────────────────────────── */
+@layer base {
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    color: #0f172a;
+    font-family: var(--font-sans);
+    background:
+      radial-gradient(circle at top left, rgba(245, 158, 11, 0.06), transparent 24%),
+      radial-gradient(circle at top right, rgba(99, 102, 241, 0.06), transparent 28%),
+      linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, select, input, textarea { font: inherit; }
+  button { cursor: pointer; }
+  input, textarea { color: #0f172a; }
+  a { color: inherit; }
+  #root { min-height: 100vh; }
+}
+
+/* ── Keyframes ─────────────────────────────────────────────────────────────── */
+@keyframes grow-bar {
+  from { width: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Thin scrollbar utility ────────────────────────────────────────────────── */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb { background: var(--color-line); border-radius: 999px; }
+  &::-webkit-scrollbar-thumb:hover { background: var(--color-line-strong); }
+}
+
+/* ── Glass card utility ────────────────────────────────────────────────────── */
+@utility glass-card {
+  background: var(--color-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
+}
