@@ -1,6 +1,6 @@
 # ECS Deployment
 
-This folder contains a practical AWS deployment starting point for HireForge on ECS Fargate.
+This folder contains a practical AWS deployment starting point for HirePulse on ECS Fargate.
 
 Recommended shape:
 

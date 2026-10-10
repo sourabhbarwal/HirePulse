@@ -1,4 +1,4 @@
-# HireForge
+# HirePulse
 
 AI resume optimization app. Users upload a resume and job description, the backend queues the work, and a Python LangGraph agent rewrites, scores, and generates a final LaTeX PDF.
 
@@ -116,7 +116,7 @@ cp agent/.env.example agent/.env
 Run each service:
 
 ```bash
-docker run -d -p 27017:27017 --name hireforge-mongo mongo:7
+docker run -d -p 27017:27017 --name hirepulse-mongo mongo:7
 cd backend && npm ci && npm run dev
 cd agent && python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && python worker.py
 cd frontend && npm ci && npm run dev

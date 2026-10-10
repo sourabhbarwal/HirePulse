@@ -49,7 +49,7 @@ app.use('/api/upload', uploadRouter);
 app.use('/api/jobs',   jobsRouter);
 
 app.get('/api/health', (_, res) => {
-  res.json({ ok: true, service: 'hireforge-backend' });
+  res.json({ ok: true, service: 'hirepulse-backend' });
 });
 
 // ── DB + Start ────────────────────────────────────────────────────────────────

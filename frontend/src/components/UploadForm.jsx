@@ -111,7 +111,7 @@ export default function UploadForm({ onSubmit, submitting }) {
             rows="12"
             value={jdText}
             onChange={(e) => setJdText(e.target.value)}
-            placeholder="Paste the complete job description here so HireForge can score the match accurately."
+            placeholder="Paste the complete job description here so HirePulse can score the match accurately."
             id="jd-textarea"
             className="w-full px-4 py-4 rounded-2xl border border-slate-200 bg-white text-slate-900 resize-y outline-none shadow-[inset_0_1px_2px_rgba(15,23,42,0.02)] focus:border-blue-300 focus:ring-4 focus:ring-blue-500/12 transition-all duration-200"
           />

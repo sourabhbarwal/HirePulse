@@ -27,9 +27,9 @@ build_push() {
   docker push "${ECR_BASE}/${repo}:${IMAGE_TAG}"
 }
 
-build_push "hireforge-backend" "backend"
-build_push "hireforge-agent" "agent"
-build_push "hireforge-frontend" "frontend" \
+build_push "hirepulse-backend" "backend"
+build_push "hirepulse-agent" "agent"
+build_push "hirepulse-frontend" "frontend" \
   --build-arg "VITE_API_URL=${VITE_API_URL:?Set VITE_API_URL to your backend /api URL}"
 
 echo "Pushed images with tag ${IMAGE_TAG} to ${ECR_BASE}"

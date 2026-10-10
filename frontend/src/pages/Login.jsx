@@ -32,9 +32,9 @@ export default function Login() {
         {/* Showcase */}
         <section className="glass-card flex flex-col justify-center gap-5 min-h-[620px] p-9 max-lg:min-h-auto max-lg:p-7">
           <div className="inline-flex items-center justify-center w-11 h-11 rounded-[14px] bg-gradient-to-b from-indigo-50 to-indigo-100 text-indigo-700 text-[13px] font-extrabold tracking-wider shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-            HF
+            HP
           </div>
-          <p className="mb-0 text-[11px] font-extrabold tracking-[0.14em] uppercase text-orange-800">HireForge</p>
+          <p className="mb-0 text-[11px] font-extrabold tracking-[0.14em] uppercase text-orange-800">HirePulse</p>
           <h1 className="text-[clamp(1.75rem,3vw,2.3rem)] leading-[1.12] tracking-tight font-extrabold text-slate-900">
             A sharper application workflow for every role you target.
           </h1>

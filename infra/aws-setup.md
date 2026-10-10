@@ -1,4 +1,4 @@
-# HireForge AWS Deployment
+# HirePulse AWS Deployment
 
 This project is ready to deploy as three containers:
 
@@ -16,7 +16,7 @@ This project is ready to deploy as three containers:
 - Amazon DocumentDB or MongoDB Atlas for `MONGODB_URI`
 - AWS Secrets Manager for runtime secrets
 
-Ready-to-edit ECS deployment assets live in [`infra/ecs`](/home/shivansh/HireForge/infra/ecs/README.md:1).
+Ready-to-edit ECS deployment assets live in [`infra/ecs`](./ecs/README.md).
 
 ## Required secrets and config
 
@@ -49,17 +49,17 @@ For the frontend container build:
 ## Build images
 
 ```bash
-docker build -t hireforge-frontend ./frontend
-docker build -t hireforge-backend ./backend
-docker build -t hireforge-agent ./agent
+docker build -t hirepulse-frontend ./frontend
+docker build -t hirepulse-backend ./backend
+docker build -t hirepulse-agent ./agent
 ```
 
 ## Push to ECR
 
 ```bash
-aws ecr create-repository --repository-name hireforge-frontend
-aws ecr create-repository --repository-name hireforge-backend
-aws ecr create-repository --repository-name hireforge-agent
+aws ecr create-repository --repository-name hirepulse-frontend
+aws ecr create-repository --repository-name hirepulse-backend
+aws ecr create-repository --repository-name hirepulse-agent
 ```
 
 Authenticate Docker, tag each image, and push to the matching ECR repository.
@@ -76,14 +76,14 @@ bash infra/ecs/build-and-push.sh
 
 Create three task definitions:
 
-- `hireforge-frontend`
+- `hirepulse-frontend`
   - container port `80`
   - public via ALB
-- `hireforge-backend`
+- `hirepulse-backend`
   - container port `3001`
   - public via ALB
   - health check path `/api/health`
-- `hireforge-agent`
+- `hirepulse-agent`
   - no public listener
   - desired count `1`
 

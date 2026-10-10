@@ -1,5 +1,5 @@
 {
-  "family": "hireforge-agent",
+  "family": "hirepulse-agent",
   "networkMode": "awsvpc",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "1024",
@@ -9,7 +9,7 @@
   "containerDefinitions": [
     {
       "name": "agent",
-      "image": "__AWS_ACCOUNT_ID__.dkr.ecr.__AWS_REGION__.amazonaws.com/hireforge-agent:__IMAGE_TAG__",
+      "image": "__AWS_ACCOUNT_ID__.dkr.ecr.__AWS_REGION__.amazonaws.com/hirepulse-agent:__IMAGE_TAG__",
       "essential": true,
       "environment": [
         { "name": "AWS_REGION", "value": "__AWS_REGION__" },
@@ -30,7 +30,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/hireforge/agent",
+          "awslogs-group": "/ecs/hirepulse/agent",
           "awslogs-region": "__AWS_REGION__",
           "awslogs-stream-prefix": "ecs"
         }

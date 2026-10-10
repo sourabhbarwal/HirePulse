@@ -146,10 +146,10 @@ export default function Dashboard() {
         {/* Brand */}
         <div className="glass-card p-5 flex items-start gap-3.5">
           <div className="inline-flex items-center justify-center w-11 h-11 rounded-[14px] bg-gradient-to-b from-indigo-50 to-indigo-100 text-indigo-700 text-[13px] font-extrabold tracking-wider shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] shrink-0">
-            HF
+            HP
           </div>
           <div>
-            <p className="m-0 mb-2 text-[11px] font-extrabold tracking-[0.14em] uppercase text-orange-800">HireForge</p>
+            <p className="m-0 mb-2 text-[11px] font-extrabold tracking-[0.14em] uppercase text-orange-800">HirePulse</p>
             <h1 className="text-lg leading-snug tracking-tight font-bold text-slate-900 m-0">Resume intelligence for focused job applications.</h1>
           </div>
         </div>

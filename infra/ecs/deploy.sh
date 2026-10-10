@@ -3,7 +3,7 @@ set -euo pipefail
 
 : "${AWS_REGION:?Set AWS_REGION}"
 : "${CLUSTER_NAME:?Set CLUSTER_NAME}"
-: "${SERVICE_PREFIX:=hireforge}"
+: "${SERVICE_PREFIX:=hirepulse}"
 
 register_task() {
   local file="$1"

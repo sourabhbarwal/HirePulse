@@ -1,5 +1,5 @@
 {
-  "family": "hireforge-backend",
+  "family": "hirepulse-backend",
   "networkMode": "awsvpc",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "512",
@@ -9,7 +9,7 @@
   "containerDefinitions": [
     {
       "name": "backend",
-      "image": "__AWS_ACCOUNT_ID__.dkr.ecr.__AWS_REGION__.amazonaws.com/hireforge-backend:__IMAGE_TAG__",
+      "image": "__AWS_ACCOUNT_ID__.dkr.ecr.__AWS_REGION__.amazonaws.com/hirepulse-backend:__IMAGE_TAG__",
       "essential": true,
       "portMappings": [
         {
@@ -40,7 +40,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/hireforge/backend",
+          "awslogs-group": "/ecs/hirepulse/backend",
           "awslogs-region": "__AWS_REGION__",
           "awslogs-stream-prefix": "ecs"
         }
