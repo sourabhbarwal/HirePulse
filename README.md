@@ -53,7 +53,7 @@ AWS_SECRET_ACCESS_KEY=
 S3_BUCKET=
 SQS_QUEUE_URL=
 GROQ_API_KEY=
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL=qwen/qwen3.8-27b
 FRONTEND_URL=http://localhost
 VITE_API_URL=/api
 ```
